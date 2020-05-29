@@ -1,0 +1,73 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <UserSecretsId>c6cbe95e-b355-4c61-84ab-3309b1680203</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\**" />
+    <Compile Remove="Views\Home\**" />
+    <Compile Remove="Views\Shared\**" />
+    <Content Remove="Migrations\**" />
+    <Content Remove="Views\Home\**" />
+    <Content Remove="Views\Shared\**" />
+    <EmbeddedResource Remove="Migrations\**" />
+    <EmbeddedResource Remove="Views\Home\**" />
+    <EmbeddedResource Remove="Views\Shared\**" />
+    <None Remove="Migrations\**" />
+    <None Remove="Views\Home\**" />
+    <None Remove="Views\Shared\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="ApplicationContext.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\_ViewImports.cshtml" />
+    <Content Remove="Views\_ViewStart.cshtml" />
+    <Content Remove="wwwroot\dados\Fotografa.mdf" />
+    <Content Remove="wwwroot\dados\Fotografa_log.ldf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\index.css" />
+    <None Include="wwwroot\css\reset.css" />
+    <None Include="wwwroot\dados\Fotografa.mdf" />
+    <None Include="wwwroot\dados\Fotografa_log.ldf" />
+    <None Include="wwwroot\images\facebook.png" />
+    <None Include="wwwroot\images\foto2.jpg" />
+    <None Include="wwwroot\images\foto3.jpg" />
+    <None Include="wwwroot\images\HeaderBack.jpg" />
+    <None Include="wwwroot\images\Trabalho1.jpg" />
+    <None Include="wwwroot\images\Trabalho2.jpg" />
+    <None Include="wwwroot\images\Trabalho3.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CoreCompat.System.Drawing.v2" Version="5.2.0-preview1-r131" />
+    <PackageReference Include="dropzone" Version="4.3.0" />
+    <PackageReference Include="Microsoft.AspNet.Razor" Version="3.2.7" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Language" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Net.Compilers" Version="3.1.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NETCore.Platforms" Version="3.0.0-preview5.19224.8" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.7.0-preview5.19224.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SistemaFotografa.DomainModel\SistemaFotografa.DomainModel.csproj" />
+    <ProjectReference Include="..\SistemaFotografa.DomainService\SistemaFotografa.DomainService.csproj" />
+    <ProjectReference Include="..\SistemaFotografa.InfraStructure.AzureStorage\SistemaFotografa.InfraStructure.AzureStorage.csproj" />
+    <ProjectReference Include="..\SistemaFotografa.InfraStructure.DataAccess\SistemaFotografa.InfraStructure.DataAccess.csproj" />
+  </ItemGroup>
+
+</Project>
